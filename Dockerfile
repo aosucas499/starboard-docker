@@ -54,6 +54,7 @@ RUN rm -r SBS0962_LINUX
 RUN apt-get clean && apt-get autoclean 
 
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint*
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 
